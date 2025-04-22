@@ -1,6 +1,16 @@
-fn quicksort(a: &mut [usize], p: isize, r: isize) {
+use rand::Rng;
+
+fn aleatoriza(a: &mut [usize], p: isize, r: isize) -> isize {
+    let mut rng = rand::rng();
+        let i: usize = rng.random_range(p as usize..=r as usize);
+    
+    a.swap(r as usize, i as usize);
+    particiona(a, p, r)
+}
+
+pub fn quicksort(a: &mut [usize], p: isize, r: isize) {
     if p < r {
-        let q = particiona(a, p, r);
+        let q = aleatoriza(a, p, r); 
         quicksort(a, p, q - 1);
         quicksort(a, q + 1, r);
     }
