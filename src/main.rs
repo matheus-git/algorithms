@@ -1,13 +1,11 @@
-use rand::Rng;
-
 mod heap;
 mod quicksort;
-use quicksort::quicksort;                         
-fn main() {
-    let mut rng = rand::rng();
-    let mut a: Vec<usize> = (0..100).map(|_| rng.random_range(0..1000)).collect();
-    let len = a.len();
-    quicksort(&mut a, 0, (len-1) as isize);
-    println!("{:?}", a);
-}
+mod counting_sort;
 
+use counting_sort::counting_sort;                         
+
+fn main() {
+    let mut arr = vec![8,4,5,2,9,3,1];
+    counting_sort(&mut arr);
+    println!("{:?}", arr);
+}
