@@ -5,7 +5,7 @@ fn aleatoriza(a: &mut [usize], p: isize, r: isize) -> isize {
         let i: usize = rng.random_range(p as usize..=r as usize);
     
     a.swap(r as usize, i as usize);
-    particiona(a, p, r)
+    particiona_aleatorizado(a, p, r)
 }
 
 pub fn quicksort(a: &mut [usize], p: isize, r: isize) {
@@ -16,7 +16,7 @@ pub fn quicksort(a: &mut [usize], p: isize, r: isize) {
     }
 }
 
-fn particiona(a: &mut [usize], p: isize, r: isize) -> isize {
+pub fn particiona_aleatorizado(a: &mut [usize], p: isize, r: isize) -> isize {
     let x = a[r as usize];
     let mut i = p - 1;
     for j in p..r {
