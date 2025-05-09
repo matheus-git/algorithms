@@ -5,10 +5,10 @@ mod minimo;
 mod maximo;
 mod selecao_aleatorea;
 mod pilha;
+mod linked_list;
 
 fn main() {
-    let arr = vec![8,4,5,2,9,3,6];
-    println!("{:?}", arr);
+
 }
 
 
