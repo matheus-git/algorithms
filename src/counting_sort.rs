@@ -1,9 +1,11 @@
+#![allow(dead_code)]
+
 pub fn counting_sort(arr: &mut [usize]) {
     if arr.is_empty() {
         return;
     }
 
-    let max = *arr.iter().max().unwrap();
+    let max = arr.iter().max().unwrap();
     let mut count = vec![0; max + 1];
 
     for &num in arr.iter() {

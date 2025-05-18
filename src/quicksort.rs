@@ -1,8 +1,9 @@
+#![allow(dead_code)]
 use rand::Rng;
 
 fn aleatoriza(a: &mut [usize], p: isize, r: isize) -> isize {
     let mut rng = rand::rng();
-        let i: usize = rng.random_range(p as usize..=r as usize);
+    let i: usize = rng.random_range(p as usize..=r as usize);
     
     a.swap(r as usize, i as usize);
     particiona_aleatorizado(a, p, r)

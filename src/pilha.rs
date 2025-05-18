@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 pub fn pilha_vazia(s: &Vec<usize>) -> bool {
     s.is_empty()    
 }
@@ -19,4 +21,4 @@ pub fn topo(s: &Vec<usize>) -> usize {
         panic!();
     }
 }
-
+ 

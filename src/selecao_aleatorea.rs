@@ -1,5 +1,5 @@
+#![allow(dead_code)]
 use crate::quicksort::particiona_aleatorizado;                         
-
 
 fn selecao_aleatorea(a: &mut [usize], p: isize,r: isize, i: isize) -> isize  {
     if p == r {

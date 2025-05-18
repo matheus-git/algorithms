@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 pub fn maximo(a: &[usize], n: usize) -> usize {
     let mut max = a[0];
     for i in 0..n  {

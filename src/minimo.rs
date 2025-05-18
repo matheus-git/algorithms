@@ -1,4 +1,6 @@
-fn minimo(a: &[usize], n: usize) -> usize {
+#![allow(dead_code)]
+
+pub fn minimo(a: &[usize], n: usize) -> usize {
     let mut min = a[0];
     for i in 0..n  {
         if min > a[i] {
