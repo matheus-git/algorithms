@@ -6,3 +6,4 @@ pub mod maximo;
 pub mod pilha;
 pub mod linked_list;
 pub mod rod_cutting;
+pub mod greedy;

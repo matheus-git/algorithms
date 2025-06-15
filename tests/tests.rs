@@ -1,4 +1,4 @@
-use algorithms::{minimo, maximo, heap, quicksort, counting_sort, pilha, rod_cutting};
+use algorithms::{minimo, maximo, heap, quicksort, counting_sort, pilha, rod_cutting, greedy::{Event, greedy_event_selection}};
 
 #[test]
 fn test_minimo() {
@@ -51,3 +51,30 @@ fn test_rod_cutting() {
     assert_eq!(rod_cutting::rod_cutting(&prices, length), 22);
 }
 
+#[test]
+fn test_greedy_event_selection() {
+    let events = vec![
+        Event { start: 1, end: 4 },
+        Event { start: 3, end: 5 },
+        Event { start: 0, end: 6 },
+        Event { start: 5, end: 7 },
+        Event { start: 3, end: 8 },
+        Event { start: 5, end: 9 },
+        Event { start: 6, end: 10 },
+        Event { start: 8, end: 11 },
+        Event { start: 8, end: 12 },
+        Event { start: 2, end: 13 },
+        Event { start: 12, end: 14 },
+    ];
+
+    let expected = vec![
+        Event { start: 1, end: 4 },
+        Event { start: 5, end: 7 },
+        Event { start: 8, end: 11 },
+        Event { start: 12, end: 14 },
+    ];
+
+    let result = greedy_event_selection(events);
+
+    assert_eq!(result, expected);
+}

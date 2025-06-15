@@ -3,7 +3,7 @@ use criterion::{criterion_group, criterion_main, Criterion};
 
 fn bench_dummy(c: &mut Criterion) {
     let prices: Vec<i32> = (1..=40).map(|x| x * 2).collect();
-    let length = 40;
+    let length = 30;
 
     let mut group = c.benchmark_group("Rod Cutting");
 
